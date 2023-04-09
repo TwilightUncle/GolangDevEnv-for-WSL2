@@ -1,0 +1,13 @@
+$DISTRO_NAME = "golang1.20"
+
+# ppaより、パッケージ取得。指定可能なバージョンは以下を参照
+# https://launchpad.net/~longsleep/+archive/ubuntu/golang-backports
+$GO_VERSION = "1.20"
+$TIME_ZONE = "Asia/Tokyo"
+$VSCODE_BIN_PATH = "/c/Users/<username>/AppData/Local/Programs/Microsoft\ VS\ Code/bin/code"
+$GIT_BIN_PATH = "/c/Program\ Files/Git/bin/git.exe"
+$DEFAULT_USER = "ubuntu"
+$DEFAULT_USER_PASSWORD = "secret"
+$DB_USER = "golang_1_20"
+$DB_USER_PASSWORD = "secret"
+$HOSTNAME = "golang_1_20"
