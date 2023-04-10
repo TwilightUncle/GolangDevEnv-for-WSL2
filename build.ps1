@@ -39,10 +39,9 @@ docker stop $containerID
 docker rm $containerID
 docker rmi ${DISTRO_NAME}
 
-$wsl_root_dir = 'C:\wsl'
-$vm_path = $wsl_root_dir + "\${DISTRO_NAME}\ext4.vhdx"
-if ( -not (Test-Path $wsl_root_dir) ) {
-    mkdir $wsl_root_dir
+$vm_path = $WSL_ROOT + "\${DISTRO_NAME}\ext4.vhdx"
+if ( -not (Test-Path $WSL_ROOT) ) {
+    mkdir $WSL_ROOT
 }
 
 if ( -not (Test-Path $vm_path) ) {

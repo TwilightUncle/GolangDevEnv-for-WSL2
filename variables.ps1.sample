@@ -1,3 +1,4 @@
+$WSL_ROOT = "C:\wsl"
 $DISTRO_NAME = "golang1.20"
 
 # ppaより、パッケージ取得。指定可能なバージョンは以下を参照
