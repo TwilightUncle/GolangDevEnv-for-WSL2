@@ -1,4 +1,4 @@
-# PhpDevEnv-for-WSL2
+# GolangDevEnv-for-WSL2
 WindowsにおいてWSL2の上にDockerを用いてGolangの開発環境を構築  
 
 ## 環境
@@ -9,7 +9,7 @@ Windos10, Windows11が対象
 ### 1.ソースコードダウンロード
 ```ps1
 cd path/to/dir
-git clone git@github.com:TwilightUncle/PhpDevEnv-for-WSL2.git
+git clone git@github.com:TwilightUncle/GolangDevEnv-for-WSL2.git
 ```
 
 ### 2.設定ファイルの展開と変更
