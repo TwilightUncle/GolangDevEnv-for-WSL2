@@ -1,2 +1,6 @@
 #!/bin/bash
 
+# # vscodeへgoの拡張機能をインストール
+# code --install-extension golang.go
+# # ここでは認識されなかったのであきらめる
+# # go install -v golang.org/x/tools/gopls@latest
