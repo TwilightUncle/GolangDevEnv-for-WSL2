@@ -44,7 +44,11 @@ cd /path/to/PhpEnvBuild-for-WSL2
 
 # いらない場合、Dockerのキャッシュを削除する
 docker builder prune
+```
 
+以下、ログイン及び構築した環境の破棄  
+Dockerは起動不要
+```ps1
 # 開発環境へログイン
 wsl -d <variables.ps1のDISTRO_NAMEに指定した名称>
 
