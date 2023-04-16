@@ -55,3 +55,15 @@ wsl -d <variables.ps1のDISTRO_NAMEに指定した名称>
 # いらなくなった開発環境を削除
 wsl --unregister <variables.ps1のDISTRO_NAMEに指定した名称>
 ```
+
+### 4.接続元のWindowsとWSL上でのSSH秘密鍵の共有
+Gitリモートリポジトリへの接続等を行う等、SSH関連の設定しなければいけない場合がある。   
+しかし、環境設定の変更などで一旦WSLに構築済みのdistroを破棄し、再度構築すると、SSH関連の設定を構築の度に実施しないといけなくなってしまうため手間である。  
+そこで、本項では既にWindows上でもGitを用いた開発を行っており、SSH鍵を作成済みであるものとして、以下にWSLに構築した開発環境上でもWindows上に存在する秘密鍵をWSLで流用できるように設定するコマンド手順を記載する。  
+※コマンドの実行はWSL上に構築済みの開発環境にログインして行う。  
+
+```sh
+chmod 600 /mnt/c/Users/<ユーザー名>/.ssh/<秘密鍵のファイル名>
+eval `ssh-agent`
+ssh-add /mnt/c/Users/mifuk/.ssh/id_rsa
+```
