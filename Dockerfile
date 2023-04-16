@@ -1,7 +1,6 @@
 FROM ubuntu:22.04
 
 ARG VSCODE_BIN_PATH
-ARG GIT_BIN_PATH
 ARG DEFAULT_USER
 ARG DEFAULT_USER_PASSWORD
 ARG TZ
@@ -15,6 +14,7 @@ RUN apt-get update && \
     apt-get install -y wget curl unzip vim && \
     apt-get install -y init systemd && \
     apt-get install -y mysql-server && \
+    apt-get install -y git && \
     add-apt-repository -y ppa:longsleep/golang-backports && \
     apt-get update
 RUN apt-get install -y golang-$GO_VERSION && \
@@ -32,10 +32,9 @@ RUN service mysql start && \
     mysql -uroot -p -e "create user '${DB_USER}'@'localhost' identified by '${DB_USER_PASSWORD}';" && \
     mysql -uroot -p -e "grant all on *.* to '${DB_USER}'@'localhost';"
 
-# vscode & git
+# vscode
 RUN echo "\n\
 alias code='/mnt${VSCODE_BIN_PATH}'\n\
-alias git='/mnt${GIT_BIN_PATH}'\n\
 " >> /home/$DEFAULT_USER/.bashrc
 
 # go setting

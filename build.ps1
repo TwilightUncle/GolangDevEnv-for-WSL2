@@ -20,7 +20,6 @@ if ($err) {
 
 # コンテナを作成し、tar.gzとしてexport
 docker image build --build-arg "VSCODE_BIN_PATH=${VSCODE_BIN_PATH}" `
-    --build-arg "GIT_BIN_PATH=${GIT_BIN_PATH}" `
     --build-arg "DEFAULT_USER=${DEFAULT_USER}" `
     --build-arg "DEFAULT_USER_PASSWORD=${DEFAULT_USER_PASSWORD}" `
     --build-arg "HOSTNAME=${HOSTNAME}" `
