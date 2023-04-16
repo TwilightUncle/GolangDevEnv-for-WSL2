@@ -4,3 +4,7 @@
 # code --install-extension golang.go
 # # vscode拡張機能のためのLangage server有効化用パッケージインストール
 # go install -v golang.org/x/tools/gopls@latest
+
+# # gitの設定
+# git config --global user.email "you@example.com"
+# git config --global user.name "Your Name"
